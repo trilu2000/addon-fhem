@@ -2,7 +2,7 @@ ARG BUILD_FROM
 ARG BUILD_ARCH
 
 FROM $BUILD_FROM
-LABEL maintainer="kastbernd@gmx.de"
+LABEL maintainer="trilu@gmx.de"
 
 # make sure GID for dialout group matches "Home Assistant Operating System" (dialout:x:18:)
 RUN sed -i "s/^dialout\:.*/dialout\:x\:18/" /etc/group
