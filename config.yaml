@@ -1,0 +1,45 @@
+name: FHEM
+version: 0.1.0
+slug: fhem
+description: >-
+  "FHEM is another home automation plattform"
+arch: 
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+url: https://github.com/trilu2000/addon-fhem
+ports:
+  8083/tcp: 8083
+  7072/tcp: 7072
+ports_description:
+  8083/tcp: FHEM webserver gui, to be handled within the desktop gui
+  7072/tcp: FHEM telnet port, as a raw interface
+map: 
+  - config:rw
+startup: services
+webui: http://[HOST]:[PORT:8083]/fhem
+boot: auto
+host_network: false
+privileged: 
+  - SYS_ADMIN
+  - SYS_RAWIO
+apparmor: true
+gpio: false
+usb: true
+uart: true
+ingress: true
+panel_icon: mdi:HomeFloorL
+panel_title: FHEM
+init: false
+options:
+  apt_pks: vim libjson-perl liblwp-protocol-https-perl libxml-simple-perl
+  pip_pks: []
+  npm_pks: []
+  cpan_pks: Net::MQTT  Net::MQTT::Message Net::MQTT::Message::JustMessageId
+schema: 
+  apt_pks: str
+  pip_pks: str
+  npm_pks: str
+  cpan_pks: str
