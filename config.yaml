@@ -1,8 +1,8 @@
 name: FHEM
-version: 0.1.0
+version: 0.1.1
 slug: fhem
 description: >-
-  "FHEM is another home automation plattform"
+  FHEM is another home automation plattform
 arch: 
   - armhf
   - armv7
@@ -35,8 +35,8 @@ panel_title: FHEM
 init: false
 options:
   apt_pks: vim libjson-perl liblwp-protocol-https-perl libxml-simple-perl
-  pip_pks: []
-  npm_pks: []
+  pip_pks: 
+  npm_pks: 
   cpan_pks: Net::MQTT  Net::MQTT::Message Net::MQTT::Message::JustMessageId
 schema: 
   apt_pks: str
