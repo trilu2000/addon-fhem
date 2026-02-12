@@ -1,5 +1,5 @@
 name: FHEM
-version: 0.1.2
+version: 0.1.3
 slug: fhem
 description: >-
   FHEM is another home automation plattform
@@ -29,7 +29,7 @@ apparmor: true
 gpio: false
 usb: true
 uart: true
-ingress: true
+ingress: false
 panel_icon: mdi:HomeFloorL
 panel_title: FHEM
 init: false
