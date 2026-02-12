@@ -1,5 +1,5 @@
 name: FHEM
-version: 0.1.1
+version: 0.1.2
 slug: fhem
 description: >-
   FHEM is another home automation plattform
@@ -19,7 +19,7 @@ ports_description:
 map: 
   - config:rw
 startup: services
-webui: http://[HOST]:[PORT:8083]/fhem
+webui: "[PROTO:ssl]://[HOST]:[PORT:8083]/fhem"
 boot: auto
 host_network: false
 privileged: 
@@ -35,8 +35,8 @@ panel_title: FHEM
 init: false
 options:
   apt_pks: vim libjson-perl liblwp-protocol-https-perl libxml-simple-perl
-  pip_pks: 
-  npm_pks: 
+  pip_pks: ''
+  npm_pks: ''
   cpan_pks: Net::MQTT  Net::MQTT::Message Net::MQTT::Message::JustMessageId
 schema: 
   apt_pks: str
