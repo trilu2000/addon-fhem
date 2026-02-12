@@ -1,5 +1,5 @@
 name: FHEM
-version: 0.1.3
+version: 0.1.4
 slug: fhem
 description: >-
   FHEM is another home automation plattform
@@ -19,9 +19,7 @@ ports_description:
 map: 
   - config:rw
 startup: services
-webui: "[PROTO:ssl]://[HOST]:[PORT:8083]/fhem"
 boot: auto
-host_network: false
 privileged: 
   - SYS_ADMIN
   - SYS_RAWIO
